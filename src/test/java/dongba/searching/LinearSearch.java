@@ -11,6 +11,23 @@ import java.util.stream.Collectors;
 public class LinearSearch {
 
     @Test
+    public void simpleSearch() {
+        Scanner s = new Scanner(System.in);
+        s.nextLine();
+
+        String[] nums = s.nextLine().split(" ");
+
+        String k = s.nextLine();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i].compareTo(k) == 0) {
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+
+    @Test
     public void easySumSetProblem() {
 
         Scanner s = new Scanner(System.in);

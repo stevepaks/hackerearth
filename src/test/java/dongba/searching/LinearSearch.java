@@ -11,6 +11,36 @@ import java.util.stream.Collectors;
 public class LinearSearch {
 
     @Test
+    public void willSheAcceptHim() {
+
+        Scanner s = new Scanner(System.in);
+        String t = s.nextLine();
+
+        for (int i = 0; i < Integer.valueOf(t) ; i++) {
+
+            String[] sList = s.nextLine().split(" ");
+            String s1 = sList[0];
+            String s2 = sList[1];
+            int k = 0;
+            for (int j = 0; j < s2.length(); j++) {
+                if (s1.charAt(k) == s2.charAt(j)) {
+                    if (k == s1.length() - 1) {
+                        break;
+                    }
+
+                    k++;
+                }
+            }
+
+            if (s1.length()-1 == k) {
+                System.out.println("Love you too");
+            } else {
+                System.out.println("We are only friends");
+            }
+        }
+    }
+
+    @Test
     public void simpleSearch() {
         Scanner s = new Scanner(System.in);
         s.nextLine();
